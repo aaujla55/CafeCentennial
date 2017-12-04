@@ -8,10 +8,7 @@ let passport = require('passport');
 /*//define the user model
 let UserModel = require('../models/users')
 let User = UserModel.User;
-
 let survey = require('../models/surveys');
-
-
 */
 //Get the home page and render the login form
 
@@ -23,6 +20,13 @@ indexController.displayLogin(req,res,next);
    
 });
 
+router.get('/index/home',(req,res,next) => {
+    res.render('home',{
+         title:"home"
+     });
+    
+  });
+  
 
 
 module.exports = router;
